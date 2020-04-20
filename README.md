@@ -8,18 +8,6 @@ following entity-relationship diagram:
 
 ![Jaffle Shop ERD](/etc/jaffle_shop_erd.png)
 
-This [dbt](https://www.getdbt.com/) project has a split personality:
-* **Tutorial**: The [tutorial](https://github.com/fishtown-analytics/jaffle_shop/tree/master)
-  branch is a useful minimum viable dbt project to get new dbt users up and
-  running with their first dbt project. It includes [seed](https://docs.getdbt.com/reference#seed)
-  files with generated data so a user can run this project on their own warehouse.
-* **Demo**: The [demo](https://github.com/fishtown-analytics/jaffle_shop/tree/demo/master)
-  branch is used to illustrate how we (Fishtown Analytics) would structure a dbt
-  project. The project assumes that your raw data is already in your warehouse,
-  so therefore the repo cannot be run as a standalone project. The demo is more
-  complex than the tutorial as it is structured in a way that can be extended for
-  larger projects.
-
 ### Using this project as a tutorial
 To get up and running with this project:
 1. Install dbt using [these instructions](https://docs.getdbt.com/docs/installation).
@@ -31,7 +19,7 @@ To get up and running with this project:
 $ cd jaffle_shop
 ```
 
-4. Set up a profile called `jaffle_shop` to connect to a data warehouse by
+4. Set up a profile called `dbt_training` to connect to a data warehouse by
   following [these instructions](https://docs.getdbt.com/docs/configure-your-profile).
   If you have access to a data warehouse, you can use those credentials – we
   recommend setting your [target schema](https://docs.getdbt.com/docs/configure-your-profile#section-populating-your-profile)
