@@ -14,7 +14,8 @@ renamed as (
         id as customer_id,
         first_name,
         last_name,
-        email
+        email,
+        SYSDATE as inserted_at
 
     from source
 
