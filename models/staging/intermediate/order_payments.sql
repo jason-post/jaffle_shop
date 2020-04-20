@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized = "ephemeral"
+    )
+}}
+
 {% set payment_methods = ['credit_card', 'coupon', 'bank_transfer', 'gift_card'] %}
 
 with payments as (
