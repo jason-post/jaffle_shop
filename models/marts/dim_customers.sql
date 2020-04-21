@@ -29,6 +29,9 @@ final as (
         customer_orders.first_order,
         customer_orders.most_recent_order,
         customer_orders.number_of_orders,
+        {% for payment_method in payment_methods() -%}
+        customer_payments.{{payment_method}}_amount as {{payment_method}}_lifetime_value,
+        {% endfor -%}
         customer_payments.total_amount as customer_lifetime_value,
         SYSDATE as inserted_at
 
