@@ -1,3 +1,9 @@
+{{
+    config(
+        sort = ["customer_id"]
+    )
+}}
+
 with customers as (
 
     select * from {{ ref('stg_customers') }}
