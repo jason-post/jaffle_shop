@@ -1,5 +1,3 @@
-{% set payment_methods = ['credit_card', 'coupon', 'bank_transfer', 'gift_card'] %}
-
 with orders as (
 
     select * from {{ ref('stg_orders') }}
@@ -20,7 +18,7 @@ final as (
         orders.order_date,
         orders.status,
 
-        {% for payment_method in payment_methods -%}
+        {% for payment_method in payment_methods() -%}
 
         order_payments.{{payment_method}}_amount,
 
